@@ -31,6 +31,11 @@ linuxBattery(function (err, battery) {
 ```
 
 
+## Related
+
+* [battery-level](https://github.com/gillstrom/battery-level) - Get current battery level
+
+
 ## License
 
 MIT © [Kevin Martensson](http://github.com/kevva)
