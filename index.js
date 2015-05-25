@@ -2,6 +2,10 @@
 var execFile = require('child_process').execFile;
 
 module.exports = function (cb) {
+	if (process.platform !== 'linux') {
+		throw new Error('Only Linux systems are supported');
+	}
+
 	var cmd = 'upower';
 	var args = ['-i', '/org/freedesktop/UPower/devices/battery_BAT0'];
 	var ret = {};
