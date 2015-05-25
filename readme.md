@@ -19,11 +19,11 @@ linuxBattery(function (err, battery) {
 	console.log(battery);
 	/*
 	{
-		'native-path': 'BAT0',
+		nativePath: 'BAT0',
 		vendor: 'innotek',
 		model: '1',
 		serial: '0',
-		'power supply': 'yes',
+		powerSupply: 'yes',
 		...
 	}
 	*/

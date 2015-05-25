@@ -26,5 +26,8 @@
   ],
   "devDependencies": {
     "ava": "^0.0.4"
+  },
+  "dependencies": {
+    "camelcase-keys": "^1.0.0"
   }
 }

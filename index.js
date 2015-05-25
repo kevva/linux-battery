@@ -1,4 +1,5 @@
 'use strict';
+var camelcaseKeys = require('camelcase-keys');
 var execFile = require('child_process').execFile;
 
 module.exports = function (cb) {
@@ -25,6 +26,6 @@ module.exports = function (cb) {
 			ret[el[0].trim()] = el[1];
 		});
 
-		cb(null, ret);
+		cb(null, camelcaseKeys(ret));
 	});
 };
