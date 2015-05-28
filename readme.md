@@ -18,14 +18,14 @@ var linuxBattery = require('linux-battery');
 linuxBattery(function (err, battery) {
 	console.log(battery);
 	/*
-	{
+	[{
 		nativePath: 'BAT0',
 		vendor: 'innotek',
 		model: '1',
 		serial: '0',
 		powerSupply: 'yes',
 		...
-	}
+	}]
 	*/
 });
 ```
