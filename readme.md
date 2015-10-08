@@ -13,9 +13,9 @@ $ npm install --save linux-battery
 ## Usage
 
 ```js
-var linuxBattery = require('linux-battery');
+const linuxBattery = require('linux-battery');
 
-linuxBattery(function (err, battery) {
+linuxBattery().then(battery => {
 	console.log(battery);
 	/*
 	[{

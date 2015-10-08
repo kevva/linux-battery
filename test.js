@@ -4,10 +4,9 @@ var linuxBattery = require('./');
 
 if (!process.env.CI) {
 	test(function (t) {
-		t.plan(3);
+		t.plan(2);
 
-		linuxBattery(function (err, battery) {
-			t.assert(!err, err);
+		linuxBattery().then(function (battery) {
 			t.assert(battery.length, battery);
 			t.assert(battery[0].nativePath, battery[0].nativePath);
 		});

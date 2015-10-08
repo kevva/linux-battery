@@ -26,8 +26,9 @@
   ],
   "dependencies": {
     "camelcase-keys": "^1.0.0",
-    "each-async": "^1.1.1",
-    "linux-batteries": "^1.0.0"
+    "linux-batteries": "^2.0.0",
+    "pify": "^2.2.0",
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.0.4"
