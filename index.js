@@ -9,7 +9,7 @@ module.exports = function () {
 	var cmd = 'upower';
 
 	if (process.platform !== 'linux') {
-		Promise.reject(new Error('Only Linux systems are supported'));
+		return Promise.reject(new Error('Only Linux systems are supported'));
 	}
 
 	return linuxBatteries().then(function (batteries) {
