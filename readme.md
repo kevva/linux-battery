@@ -1,4 +1,4 @@
-# linux-battery [![Build Status](https://travis-ci.org/kevva/linux-battery.svg?branch=master)](https://travis-ci.org/kevva/linux-battery)
+# linux-battery
 
 > Get info about your battery in Linux
 
