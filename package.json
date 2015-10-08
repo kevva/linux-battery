@@ -1,6 +1,6 @@
 {
   "name": "linux-battery",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Get info about your battery in Linux",
   "license": "MIT",
   "repository": "kevva/linux-battery",
