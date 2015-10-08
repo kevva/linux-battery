@@ -1,14 +1,9 @@
-'use strict';
-var test = require('ava');
-var linuxBattery = require('./');
+import test from 'ava';
+import fn from './';
 
-if (!process.env.CI) {
-	test(function (t) {
-		t.plan(2);
+test(async t => {
+	const batteries = await fn();
 
-		linuxBattery().then(function (battery) {
-			t.assert(battery.length, battery);
-			t.assert(battery[0].nativePath, battery[0].nativePath);
-		});
-	});
-}
+	t.ok(batteries.length);
+	t.ok(batteries[0].nativePath);
+});
