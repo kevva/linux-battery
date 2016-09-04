@@ -1,8 +1,8 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
 test(async t => {
-	const batteries = await fn();
+	const batteries = await m();
 
 	t.truthy(batteries.length);
 	t.truthy(batteries[0].nativePath);
