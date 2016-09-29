@@ -13,14 +13,12 @@ module.exports = () => {
 		const obj = {};
 
 		return execa.stdout('upower', args).then(stdout => {
-			stdout = stdout.trim().split('\n').forEach(x => {
-				if (x.trim() === 'battery') {
-					return;
+			for (const x of stdout.trim().split('\n')) {
+				if (x.trim() !== 'battery') {
+					const key = x.split(/:\s+(?=[\w\d'])/);
+					obj[key[0].trim()] = key[1];
 				}
-
-				x = x.split(/:\s+(?=[\w\d'])/);
-				obj[x[0].trim()] = x[1];
-			});
+			}
 
 			return camelcaseKeys(obj);
 		});
